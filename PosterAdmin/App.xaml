@@ -1,0 +1,26 @@
+﻿<Application x:Class="PosterAdmin.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Material Design 5.2.1 테마 설정 -->
+                <materialDesign:BundledTheme 
+                    BaseTheme="Light" 
+                    PrimaryColor="DeepPurple" 
+                    SecondaryColor="Lime" />
+                
+                <!-- Material Design 3 기본 스타일 (최신 권장) -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+                
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- 기본 컨버터 -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
